@@ -100,6 +100,7 @@ class InsecureDesignHandler(BaseHTTPRequestHandler):
             self._send_json(404, {"error": "Not found"})
 
     def do_POST(self):
+        global orders
         parsed = urllib.parse.urlparse(self.path)
         length = int(self.headers.get("Content-Length", 0))
         body = self.rfile.read(length).decode("utf-8") if length > 0 else "{}"
@@ -128,7 +129,6 @@ class InsecureDesignHandler(BaseHTTPRequestHandler):
 
             self._send_json(200, resp)
         elif parsed.path == "/api/reset":
-            global orders
             orders = {
                 "1001": {"id": "1001", "item": "Office Stationery", "amount": 120, "status": "DRAFT", "owner": "alice"},
                 "1002": {"id": "1002", "item": "High-Performance AI Server", "amount": 15000, "status": "PENDING_APPROVAL", "owner": "bob"},
