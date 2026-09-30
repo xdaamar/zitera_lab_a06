@@ -12,3 +12,5 @@ Independent standalone laboratory repository for **OWASP A06:2025 (Insecure Desi
 - `lesson/`: Modular pedagogical curriculum
 - `challenge/`: CTF mission and 4-tier progressive hints
 - `docker/`: Isolated container runtime
+
+<!-- Updated to v1.0.1 via dynamic zero-recompile test -->

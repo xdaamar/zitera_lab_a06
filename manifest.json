@@ -4,7 +4,7 @@
   "slug": "insecure-design",
   "title": "Insecure Design",
   "owasp": "A06:2025",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "difficulty": "Intermediate",
   "runtime": "docker",
   "entrypoint": "docker/compose.yml",
